@@ -7,4 +7,5 @@ passlib[bcrypt]==1.7.4
 python-multipart==0.0.9
 pydantic-settings==2.3.4
 python-dotenv==1.0.0
-cryptography==41.0.7  # Required for MySQL auth
+cryptography==41.0.7 
+email-validator
