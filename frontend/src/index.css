@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  
+  /* Custom colors for Ataraxia */
+  --color-sage-50: #f2f7f0;
+  --color-sage-100: #e0f0da;
+  --color-sage-200: #c2e1b5;
+  --color-sage-300: #9fc98f;
+  --color-sage-400: #7db068;
+  --color-sage-500: #5e9749;
+  --color-sage-600: #4a7a38;
+  --color-sage-700: #3a5f2c;
+  --color-sage-800: #2c4422;
+  --color-sage-900: #1e2f18;
+  --color-deep-forest: #1A2A1F;
+  --color-warm-sand: #E5D3B0;
+  --color-mist-blue: #A7C7D9;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-deep-forest);
+  color: white;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(156, 175, 136, 0.2);
+  border-color: rgba(156, 175, 136, 0.3);
+}
